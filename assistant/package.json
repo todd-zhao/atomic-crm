@@ -1,0 +1,27 @@
+{
+  "name": "atomic-crm-assistant",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Atomic CRM built-in AI assistant (BYOK, pi-durable runtime)",
+  "scripts": {
+    "dev": "node --env-file-if-exists=.env --import tsx --watch src/index.ts",
+    "start": "node --env-file-if-exists=.env --import tsx src/index.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@earendil-works/chord": "1.4.0",
+    "@earendil-works/pi-ai": "1.4.0",
+    "@earendil-works/pi-durable": "1.4.0",
+    "@hono/node-server": "^1.14.0",
+    "hono": "^4.7.0",
+    "jose": "^6.0.0",
+    "pg": "^8.16.0",
+    "tsx": "^4.20.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/pg": "^8.11.0",
+    "typescript": "^5.8.3"
+  }
+}

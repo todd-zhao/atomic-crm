@@ -1,0 +1,4 @@
+name,company,deal_type,stage,status,source_type,channel,sales,budget,final_amount,decision_process,competitor,expected_closing_date,description
+New website,Acme,new,contact,potential,direct,,jane@atomic.dev,12000,,"CEO and CTO decide, CFO signs off",Globex,2026-09-30,Redesign of the public website
+Print campaign,Globex Travel,renewal,pain,active,channel,Globex OTA,jane@atomic.dev,4500,,"Marketing director owns the budget",,2026-10-15,
+Annual retainer,Acme,upsell,solution,won,direct,,,30000,28000,"Procurement validates the contract",Initech,2026-08-31,Renewal with two extra services (no owner yet)

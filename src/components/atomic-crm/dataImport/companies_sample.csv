@@ -1,0 +1,5 @@
+name,company_kind,channel_type,sector,size,linkedin_url,website,phone_number,address,zipcode,city,state_abbr,country,description,revenue,tax_identifier,customer_category,parent_company_id,hotel_type,rooms,opening_year,hotel_services,average_room_rate
+万豪国际集团,hotel,,hotel-group,500,https://www.linkedin.com/company/marriott,https://marriott.example,+86-21-6882-8888,上海市黄浦区南京东路 199 号,200002,上海,沪,中国,国际酒店集团总部,50B,CN-913100001000000001,keep,,,,,,
+上海外滩华尔道夫酒店,hotel,,hotel,250,https://www.linkedin.com/company/waldorf-shanghai,https://waldorf-shanghai.example,+86-21-6322-9988,上海市黄浦区中山东一路 2 号,200002,上海,沪,中国,外滩历史建筑改造的奢华酒店,2B,CN-913100001000000002,keep,万豪国际集团,international_chain,260,2010,rooms;restaurant;meeting;entertainment,1800.5
+杭州西湖国宾馆,hotel,,hotel,250,,https://xihu-guuesthouse.example,+86-571-8797-9889,浙江省杭州市西湖区杨公堤 18 号,310007,杭州,浙,中国,西湖景区内的园林式国宾馆,800M,CN-913300001000000003,expand,,independent,200,1958,rooms;restaurant,950
+携程旅行网,channel,ota,travel,500,https://www.linkedin.com/company/ctrip,https://ctrip.example.com,+86-21-8000-8001,上海市长宁区金钟路 968 号,200051,上海,沪,中国,头部 OTA 渠道 酒店直连与分销合作,5B,CN-913100001000000004,,,,,,,

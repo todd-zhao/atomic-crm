@@ -1,0 +1,46 @@
+name: atomic-crm
+
+services:
+  # Node sidecar running the pi-durable assistant (BYOK).
+  assistant:
+    build:
+      context: ../assistant
+    restart: unless-stopped
+    env_file:
+      - ./assistant.env
+    environment:
+      HOST: 0.0.0.0
+      PORT: "8787"
+      ASSISTANT_SQLITE_PATH: /data/assistant.sqlite
+    volumes:
+      - assistant-data:/data
+    expose:
+      - "8787"
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "node",
+          "-e",
+          "fetch('http://127.0.0.1:8787/assistant/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))",
+        ]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 20s
+
+  # Static CRM build + reverse proxy for the assistant (same-origin /assistant).
+  web:
+    image: nginx:1.27-alpine
+    restart: unless-stopped
+    depends_on:
+      assistant:
+        condition: service_healthy
+    volumes:
+      - ../dist:/usr/share/nginx/html:ro
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    ports:
+      - "80:80"
+
+volumes:
+  assistant-data:
